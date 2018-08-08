@@ -25,6 +25,7 @@ dependencies {
   implementation Libs.contentpager
 
   implementation Libs.kotlin
+  implementation Libs.corektx
   implementation Libs.appcompat
   implementation Libs.constraintlayout
   implementation Libs.recyclerview

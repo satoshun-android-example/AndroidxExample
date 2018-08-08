@@ -25,6 +25,7 @@ object Libs {
   val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha1"
   val cardview = "androidx.cardview:cardview:1.0.0-beta01"
   val contentpager = "androidx.contentpager:contentpager:1.0.0-rc01"
+  val corektx = "androidx.core:core-ktx:1.0.0-alpha1"
 
   val viewmodel = "android.arch.lifecycle:viewmodel:1.1.1"
   val livedata = "android.arch.lifecycle:livedata:1.1.1"

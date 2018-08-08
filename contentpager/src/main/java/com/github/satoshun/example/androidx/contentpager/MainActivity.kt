@@ -2,19 +2,33 @@ package com.github.satoshun.example.androidx.contentpager
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.database.Cursor
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.contentpager.content.ContentPager
+import androidx.contentpager.content.LoaderQueryRunner
+import androidx.core.os.bundleOf
+import androidx.core.view.postDelayed
+import androidx.core.widget.toast
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+  private lateinit var adapter: MainAdapter
+
+  private var offset = 0
+  private val limit = 10
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
+
+    adapter = MainAdapter(mutableListOf())
+    recycler.adapter = adapter
 
     if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
       if (shouldShowRequestPermissionRationale(Manifest.permission.READ_EXTERNAL_STORAGE)) {
@@ -38,6 +52,48 @@ class MainActivity : AppCompatActivity() {
         MediaStore.Images.Thumbnails.DATA
     )
     val uri = MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI
+    val pager = ContentPager(
+        contentResolver,
+        LoaderQueryRunner(this, loaderManager)
+    )
+    pager.query(
+        uri,
+        projection,
+        bundleOf(
+            ContentPager.QUERY_ARG_OFFSET to offset,
+            ContentPager.QUERY_ARG_LIMIT to limit
+        ),
+        null
+    ) { query, cursor ->
+      cursor ?: return@query
+      val count = cursor.count
+      if (count == 0) return@query
+
+      toast("load new data: $count")
+
+      offset += count
+      cursor.populate()
+      cursor.close()
+      adapter.notifyDataSetChanged()
+
+      // finished loading data
+      if (count != limit) return@query
+
+      recycler.postDelayed(3000) {
+        runCursor()
+      }
+    }
+
+//    basicway()
+  }
+
+  private fun basicway() {
+    val projection = arrayOf(
+        MediaStore.Images.Thumbnails._ID,
+        MediaStore.Images.Thumbnails.IMAGE_ID,
+        MediaStore.Images.Thumbnails.DATA
+    )
+    val uri = MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI
     val cursor = contentResolver.query(
         uri,
         projection,
@@ -45,10 +101,16 @@ class MainActivity : AppCompatActivity() {
         null,
         MediaStore.Images.Thumbnails.IMAGE_ID
     )
+    cursor?.populate()
+    cursor?.close()
+    adapter.notifyDataSetChanged()
+  }
+
+  private fun Cursor.populate() {
     val da = mutableListOf<Data>()
-    cursor?.moveToFirst()
-    while (cursor?.moveToNext() == true) {
-      val id = cursor.getLong(cursor.getColumnIndex(MediaStore.Images.Thumbnails.IMAGE_ID))
+    moveToFirst()
+    while (moveToNext()) {
+      val id = getLong(getColumnIndex(MediaStore.Images.Thumbnails.IMAGE_ID))
 
       val bitmap = MediaStore.Images.Thumbnails.getThumbnail(
           contentResolver,
@@ -56,17 +118,15 @@ class MainActivity : AppCompatActivity() {
           MediaStore.Images.Thumbnails.MINI_KIND,
           null
       )
-      da += Data(bitmap)
+      adapter.d.add(Data(bitmap))
     }
-    recycler.adapter = MainAdapter(da)
-    cursor?.close()
   }
 }
 
 private class Data(val bitmap: Bitmap)
 
 private class MainAdapter(
-  private val d: List<Data>
+  val d: MutableList<Data>
 ) : RecyclerView.Adapter<MainViewHolder>() {
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
