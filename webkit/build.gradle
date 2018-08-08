@@ -6,7 +6,7 @@ android {
   compileSdkVersion Vers.compile_sdk
 
   defaultConfig {
-    applicationId "com.github.satoshun.example.androidx.contentpager"
+    applicationId "com.github.satoshun.example.androidx.webkit"
     minSdkVersion Vers.min_sdk
     targetSdkVersion Vers.target_sdk
     versionCode 1
@@ -22,7 +22,7 @@ android {
 }
 
 dependencies {
-  implementation Libs.contentpager
+  implementation Libs.webkit
 
   implementation Libs.kotlin
   implementation Libs.ktx
@@ -30,8 +30,10 @@ dependencies {
   implementation Libs.constraintlayout
   implementation Libs.recyclerview
 
-  testImplementation 'junit:junit:4.12'
+  implementation Libs.rxwebview
 
-  androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
-  androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+  testImplementation Libs.junit
+
+  androidTestImplementation Libs.test_runner
+  androidTestImplementation Libs.espresso
 }

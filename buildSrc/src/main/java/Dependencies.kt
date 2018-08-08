@@ -20,22 +20,27 @@ object Libs {
 
   val ktx = "androidx.core:core-ktx:1.0.0-alpha1"
 
-  val appcompat = "androidx.appcompat:appcompat:1.0.0-beta01"
+  val appcompat = "androidx.appcompat:appcompat:1.0.0-rc01"
   val recyclerview = "androidx.recyclerview:recyclerview:1.0.0-rc01"
   val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha1"
-  val cardview = "androidx.cardview:cardview:1.0.0-beta01"
-  val contentpager = "androidx.contentpager:contentpager:1.0.0-rc01"
-  val corektx = "androidx.core:core-ktx:1.0.0-alpha1"
+  val cardview = "androidx.cardview:cardview:1.0.0-rc01"
 
-  val viewmodel = "android.arch.lifecycle:viewmodel:1.1.1"
-  val livedata = "android.arch.lifecycle:livedata:1.1.1"
+  val contentpager = "androidx.contentpager:contentpager:1.0.0-rc01"
+  val webkit = "androidx.webkit:webkit:1.0.0-rc01"
+  val material = "com.google.android.material:material:1.0.0-rc01"
+  val paging = "androidx.paging:paging-runtime:2.0.0-rc01"
+
+  val rxwebview = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.2.0"
+
+  val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0-rc01"
+  val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0-rc01"
+  val lifecycle_compiler = "androidx.lifecycle:lifecycle-compiler:2.0.0-rc01"
+
+  val multidex = "com.android.support:multidex:1.0.3"
 
   val junit = "junit:junit:4.12"
-  val support_test = "com.android.support.test:runner:1.0.1"
-  val espresso = "com.android.support.test.espresso:espresso-core:3.0.1"
-  val arch_test = "android.arch.core:core-testing:1.1.1"
-
   val truth = "com.google.truth:truth:0.39"
   val mockito_kotlin = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
-  val multidex = "com.android.support:multidex:1.0.3"
+  val test_runner = "androidx.test:runner:1.1.0-alpha4"
+  val espresso = "androidx.test.espresso:espresso-core:3.1.0-alpha4"
 }
