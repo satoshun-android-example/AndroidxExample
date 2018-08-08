@@ -27,6 +27,8 @@ object Libs {
 
   val contentpager = "androidx.contentpager:contentpager:1.0.0-rc01"
   val webkit = "androidx.webkit:webkit:1.0.0-rc01"
+  val media2 = "androidx.media2:media2:1.0.0-alpha02"
+
   val material = "com.google.android.material:material:1.0.0-rc01"
   val paging = "androidx.paging:paging-runtime:2.0.0-rc01"
 
