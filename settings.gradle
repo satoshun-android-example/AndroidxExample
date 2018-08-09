@@ -1,3 +1,4 @@
 include ':contentpager'
 include ':webkit'
 include ':media2'
+include ':paging'
