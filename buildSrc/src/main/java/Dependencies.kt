@@ -31,6 +31,7 @@ object Libs {
 
   val material = "com.google.android.material:material:1.0.0-rc01"
   val paging = "androidx.paging:paging-runtime:2.0.0-rc01"
+  val browser = "androidx.browser:browser:1.0.0-rc01"
 
   val rxwebview = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.2.0"
 
