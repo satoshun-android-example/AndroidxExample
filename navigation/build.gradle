@@ -6,7 +6,7 @@ android {
   compileSdkVersion Vers.compile_sdk
 
   defaultConfig {
-    applicationId "com.github.satoshun.example.androidx.browser"
+    applicationId "com.github.satoshun.example.androidx.navigation"
     minSdkVersion Vers.min_sdk
     targetSdkVersion Vers.target_sdk
     versionCode 1
@@ -22,12 +22,11 @@ android {
 }
 
 dependencies {
-  implementation Libs.browser
+  implementation Libs.navigation
+  implementation Libs.navigation_ui
 
   implementation Libs.kotlin
-
   implementation Libs.ktx
-  implementation Libs.material
   implementation Libs.appcompat
   implementation Libs.constraintlayout
   implementation Libs.recyclerview

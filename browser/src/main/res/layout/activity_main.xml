@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-  <Button
+  <com.google.android.material.button.MaterialButton
       android:id="@+id/open_link"
       android:layout_width="0dp"
       android:layout_height="80dp"
@@ -21,8 +21,26 @@
       android:id="@+id/open_link_menu_items"
       android:layout_width="0dp"
       android:layout_height="80dp"
+      android:text="OPEN LINK MENU ITEMS"
       app:layout_constraintBottom_toTopOf="@id/open_link"
       app:layout_constraintEnd_toEndOf="parent"
-      android:text="OPEN LINK MENU ITEMS"
+      app:layout_constraintStart_toStartOf="parent"/>
+
+  <Button
+      android:id="@+id/customtab"
+      android:layout_width="0dp"
+      android:layout_height="80dp"
+      android:text="customtab"
+      app:layout_constraintBottom_toTopOf="@id/open_link_menu_items"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"/>
+
+  <Button
+      android:id="@+id/customtab_session"
+      android:layout_width="0dp"
+      android:layout_height="80dp"
+      android:text="customtab session"
+      app:layout_constraintBottom_toTopOf="@id/customtab"
+      app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
