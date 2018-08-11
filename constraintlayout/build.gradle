@@ -28,6 +28,9 @@ dependencies {
   implementation Libs.ktx
   implementation Libs.appcompat
   implementation Libs.recyclerview
+  implementation Libs.material
+  implementation Libs.navigation
+  implementation Libs.navigation_ui
 
   testImplementation Libs.junit
 
