@@ -8,12 +8,12 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.contentpager.content.ContentPager
 import androidx.contentpager.content.LoaderQueryRunner
 import androidx.core.os.bundleOf
 import androidx.core.view.postDelayed
-import androidx.core.widget.toast
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -37,15 +37,15 @@ class MainActivity : AppCompatActivity() {
       requestPermissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), 1)
       return
     }
-    runCursor()
+    useContentPager()
   }
 
   override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
     super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-    runCursor()
+    useContentPager()
   }
 
-  private fun runCursor() {
+  private fun useContentPager() {
     val projection = arrayOf(
         MediaStore.Images.Thumbnails._ID,
         MediaStore.Images.Thumbnails.IMAGE_ID,
@@ -69,7 +69,9 @@ class MainActivity : AppCompatActivity() {
       val count = cursor.count
       if (count == 0) return@query
 
-      toast("load new data: $count")
+      Toast
+          .makeText(this, "load new data: $count",Toast.LENGTH_LONG)
+          .show()
 
       offset += count
       cursor.populate()
@@ -80,14 +82,12 @@ class MainActivity : AppCompatActivity() {
       if (count != limit) return@query
 
       recycler.postDelayed(3000) {
-        runCursor()
+        useContentPager()
       }
     }
-
-//    basicway()
   }
 
-  private fun basicway() {
+  private fun useRawContentResolver() {
     val projection = arrayOf(
         MediaStore.Images.Thumbnails._ID,
         MediaStore.Images.Thumbnails.IMAGE_ID,
@@ -107,7 +107,6 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun Cursor.populate() {
-    val da = mutableListOf<Data>()
     moveToFirst()
     while (moveToNext()) {
       val id = getLong(getColumnIndex(MediaStore.Images.Thumbnails.IMAGE_ID))
