@@ -90,28 +90,36 @@ class MainActivity : AppCompatActivity() {
           this,
           CustomTabsClient.getPackageName(this@MainActivity, null),
           object : CustomTabsServiceConnection() {
-            override fun onCustomTabsServiceConnected(name: ComponentName?, client: CustomTabsClient) {
+            override fun onCustomTabsServiceConnected(name: ComponentName, client: CustomTabsClient) {
+              val conn = this
               val session = client.newSession(object : CustomTabsCallback() {
                 override fun onNavigationEvent(navigationEvent: Int, extras: Bundle?) {
                   Log.d("onNavigationEvent", navigationEvent.toString())
+                  if (navigationEvent == CustomTabsCallback.TAB_HIDDEN) {
+                    this@MainActivity.unbindService(conn)
+                  }
                 }
 
-                override fun extraCallback(callbackName: String?, args: Bundle?) {
-                  Log.d("extraCallback", callbackName.toString())
+                override fun extraCallback(callbackName: String, args: Bundle?) {
+                  Log.d("extraCallback", callbackName)
                 }
               })
 
               val tabIntent = CustomTabsIntent.Builder(session)
                   .setShowTitle(true)
                   .build()
-              tabIntent.launchUrl(this@MainActivity, "http://google.com".toUri())
+              tabIntent.launchUrl(
+                  this@MainActivity,
+                  "http://google.com".toUri()
+              )
 
 //              customtab_session.postDelayed(5000) {
 //                session.mayLaunchUrl("https://github.com".toUri(), Bundle(), emptyList())
 //              }
             }
 
-            override fun onServiceDisconnected(p0: ComponentName?) {
+            override fun onServiceDisconnected(name: ComponentName) {
+              Log.d("ServiceDisconnected", name.toString())
             }
           })
     }
