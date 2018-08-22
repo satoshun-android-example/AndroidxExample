@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
   compileSdkVersion Vers.compile_sdk
 
   defaultConfig {
-    applicationId "com.github.satoshun.example.androidx.contentpager"
+    applicationId "com.github.satoshun.example.androidx.databinding"
     minSdkVersion Vers.min_sdk
     targetSdkVersion Vers.target_sdk
     versionCode 1
@@ -19,6 +18,9 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+  dataBinding {
+    enabled = true
+  }
 }
 
 dependencies {
@@ -30,13 +32,11 @@ dependencies {
   implementation Libs.constraintlayout
   implementation Libs.recyclerview
 
-  implementation Libs.rxjava
-  implementation Libs.rxandroid
-  implementation Libs.coroutine
-  implementation Libs.ui_coroutine
+  implementation Libs.groupie
+  implementation Libs.groupie_databinding
 
-  testImplementation 'junit:junit:4.12'
+  testImplementation Libs.junit
 
-  androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
-  androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+  androidTestImplementation Libs.test_runner
+  androidTestImplementation Libs.espresso
 }
