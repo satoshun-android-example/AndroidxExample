@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             ContentPager.QUERY_ARG_LIMIT to limit
         ),
         null
-    ) { query, cursor ->
+    ) { _, cursor ->
       cursor ?: return@query
       val count = cursor.count
       if (count == 0) return@query
