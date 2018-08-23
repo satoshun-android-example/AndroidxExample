@@ -9,7 +9,7 @@ object Vers {
 }
 
 object Libs {
-  val android_plugin = "com.android.tools.build:gradle:3.3.0-alpha06"
+  val android_plugin = "com.android.tools.build:gradle:3.2.0-beta05"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   val dokka_plugin = "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.16"
   val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha04"
@@ -43,6 +43,12 @@ object Libs {
   val lifecycle_compiler = "androidx.lifecycle:lifecycle-compiler:2.0.0-rc01"
 
   val multidex = "com.android.support:multidex:1.0.3"
+
+  val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
+  val rxandroid = "io.reactivex.rxjava2:rxandroid:2.1.0"
+
+  val groupie = "com.xwray:groupie:2.1.0"
+  val groupie_databinding = "com.xwray:groupie-databinding:2.1.0"
 
   val junit = "junit:junit:4.12"
   val truth = "com.google.truth:truth:0.39"

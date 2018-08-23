@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
 
     val fragment = nav_host_fragment
     Log.d("fragment", fragment.toString())
-    val con = findNavController(R.id.nav_host_fragment)
-    Log.d("fragment", con.toString())
-
-    val view: View = ActivityCompat.requireViewById(this, R.id.nav_host_fragment)
-    Log.d("fragment", view.toString())
+//    val con = findNavController(R.id.nav_host_fragment)
+//    Log.d("fragment", con.toString())
+//
+//    val view: View = ActivityCompat.requireViewById(this, R.id.nav_host_fragment)
+//    Log.d("fragment", view.toString())
   }
 }

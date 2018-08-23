@@ -11,7 +11,6 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.contentpager.content.ContentPager
-import androidx.contentpager.content.LoaderQueryRunner
 import androidx.core.os.bundleOf
 import androidx.core.view.postDelayed
 import androidx.recyclerview.widget.RecyclerView
@@ -54,7 +53,9 @@ class MainActivity : AppCompatActivity() {
     val uri = MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI
     val pager = ContentPager(
         contentResolver,
-        LoaderQueryRunner(this, loaderManager)
+        CoroutineQueryRunner()
+//        RxQueryRunner()
+//        LoaderQueryRunner(this, loaderManager)
     )
     pager.query(
         uri,
@@ -70,7 +71,7 @@ class MainActivity : AppCompatActivity() {
       if (count == 0) return@query
 
       Toast
-          .makeText(this, "load new data: $count",Toast.LENGTH_LONG)
+          .makeText(this, "load new data: $count", Toast.LENGTH_LONG)
           .show()
 
       offset += count
