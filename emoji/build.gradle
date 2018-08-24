@@ -24,6 +24,8 @@ android {
 
 dependencies {
   implementation Libs.emoji
+  implementation Libs.emoji_compat
+  implementation Libs.emoji_bundled
 
   implementation Libs.kotlin
   implementation Libs.ktx
