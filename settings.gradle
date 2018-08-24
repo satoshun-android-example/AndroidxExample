@@ -6,3 +6,5 @@ include ':browser'
 include ':navigation'
 include ':constraintlayout'
 include ':databinding'
+include ':emoji'
+

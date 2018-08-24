@@ -42,6 +42,10 @@ object Libs {
   val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0-rc01"
   val lifecycle_compiler = "androidx.lifecycle:lifecycle-compiler:2.0.0-rc01"
 
+  val emoji = "androidx.emoji:emoji:1.0.0-rc01"
+  val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0-rc01"
+  val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0-rc01"
+
   val multidex = "com.android.support:multidex:1.0.3"
 
   val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
