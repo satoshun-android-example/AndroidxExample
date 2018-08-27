@@ -19,20 +19,20 @@ object Libs {
   val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Vers.couroutine}"
   val ui_coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Vers.couroutine}"
 
-  val ktx = "androidx.core:core-ktx:1.0.0-rc01"
+  val ktx = "androidx.core:core-ktx:1.0.0-rc02"
 
-  val appcompat = "androidx.appcompat:appcompat:1.0.0-rc01"
-  val recyclerview = "androidx.recyclerview:recyclerview:1.0.0-rc01"
+  val appcompat = "androidx.appcompat:appcompat:1.0.0-rc02"
+  val recyclerview = "androidx.recyclerview:recyclerview:1.0.0-rc02"
   val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
   val cardview = "androidx.cardview:cardview:1.0.0-rc01"
 
   val contentpager = "androidx.contentpager:contentpager:1.0.0-rc01"
-  val webkit = "androidx.webkit:webkit:1.0.0-rc01"
+  val webkit = "androidx.webkit:webkit:1.0.0-rc02"
   val media2 = "androidx.media2:media2:1.0.0-alpha02"
 
   val material = "com.google.android.material:material:1.0.0-rc01"
   val paging = "androidx.paging:paging-runtime:2.0.0-rc01"
-  val browser = "androidx.browser:browser:1.0.0-rc01"
+  val browser = "androidx.browser:browser:1.0.0-rc02"
   val navigation = "android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha05"
   val navigation_ui = "android.arch.navigation:navigation-ui-ktx:1.0.0-alpha05"
 
@@ -42,9 +42,9 @@ object Libs {
   val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0-rc01"
   val lifecycle_compiler = "androidx.lifecycle:lifecycle-compiler:2.0.0-rc01"
 
-  val emoji = "androidx.emoji:emoji:1.0.0-rc01"
-  val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0-rc01"
-  val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0-rc01"
+  val emoji = "androidx.emoji:emoji:1.0.0-rc02"
+  val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0-rc02"
+  val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0-rc02"
 
   val multidex = "com.android.support:multidex:1.0.3"
 
