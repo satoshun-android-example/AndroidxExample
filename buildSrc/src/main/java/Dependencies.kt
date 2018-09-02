@@ -9,7 +9,7 @@ object Vers {
 }
 
 object Libs {
-  val android_plugin = "com.android.tools.build:gradle:3.2.0-rc02"
+  val android_plugin = "com.android.tools.build:gradle:3.1.4"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   val dokka_plugin = "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.16"
   val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha04"
@@ -35,6 +35,10 @@ object Libs {
   val browser = "androidx.browser:browser:1.0.0-rc02"
   val navigation = "android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha05"
   val navigation_ui = "android.arch.navigation:navigation-ui-ktx:1.0.0-alpha05"
+
+  val room_common = "androidx.room:room-common:2.0.0-rc01"
+  val room_runtime = "androidx.room:room-runtime:2.0.0-rc01"
+  val room_compiler = "androidx.room:room-compiler:2.0.0-rc01"
 
   val rxwebview = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.2.0"
 
