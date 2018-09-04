@@ -4,7 +4,7 @@ object Vers {
   val target_sdk = 28
 
   val kotlin = "1.2.61"
-  val couroutine = "0.25.0"
+  val couroutine = "0.24.0"
   val ktlint = "0.24.0"
 }
 
