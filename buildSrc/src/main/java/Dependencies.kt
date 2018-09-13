@@ -1,9 +1,9 @@
 object Vers {
   val compile_sdk = 28
-  val min_sdk = 25
+  val min_sdk = 24
   val target_sdk = 28
 
-  val kotlin = "1.2.61"
+  val kotlin = "1.2.70"
   val couroutine = "0.24.0"
   val ktlint = "0.24.0"
 }

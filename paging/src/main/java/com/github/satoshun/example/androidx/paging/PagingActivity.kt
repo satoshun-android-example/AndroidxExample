@@ -5,30 +5,53 @@ import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.paging.DataSource
+import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedListAdapter
+import androidx.paging.PositionalDataSource
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class PagingActivity : AppCompatActivity() {
   private lateinit var adapter: MainAdapter
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    adapter = MainAdapter(
-        mutableListOf(),
-        MainItemCallback()
-    )
+    adapter = MainAdapter(MainItemCallback())
     recycler.adapter = adapter
+
+    val factory = object : DataSource.Factory<Int, Data>() {
+      override fun create(): DataSource<Int, Data> {
+        return MyDataSource()
+      }
+    }
+    val paged = LivePagedListBuilder(
+        factory,
+        10
+    )
+    paged.build().observe(this, Observer {
+      adapter.submitList(it!!)
+    })
   }
 }
 
-private data class Data(val bitmap: Bitmap)
+class MyDataSource : PositionalDataSource<Data>() {
+  override fun loadRange(params: LoadRangeParams, callback: LoadRangeCallback<Data>) {
+    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  }
+
+  override fun loadInitial(params: LoadInitialParams, callback: LoadInitialCallback<Data>) {
+    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+  }
+}
+
+data class Data(val bitmap: Bitmap)
 
 private class MainAdapter(
-  val d: MutableList<Data>,
   diffCallback: DiffUtil.ItemCallback<Data>
 ) : PagedListAdapter<Data, MainViewHolder>(diffCallback) {
 
@@ -36,10 +59,9 @@ private class MainAdapter(
     return MainViewHolder(ImageView(parent.context))
   }
 
-  override fun getItemCount(): Int = d.size
-
   override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-    holder.imageView.setImageBitmap(d[position].bitmap)
+    val item = getItem(position)!!
+    holder.imageView.setImageBitmap(item.bitmap)
   }
 }
 
