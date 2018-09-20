@@ -15,7 +15,7 @@ import androidx.browser.customtabs.CustomTabsServiceConnection
 import androidx.core.net.toUri
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class BrowserActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
     customtab_session.setOnClickListener {
       CustomTabsClient.bindCustomTabsService(
           this,
-          CustomTabsClient.getPackageName(this@MainActivity, null),
+          CustomTabsClient.getPackageName(this@BrowserActivity, null),
           object : CustomTabsServiceConnection() {
             override fun onCustomTabsServiceConnected(name: ComponentName, client: CustomTabsClient) {
               val conn = this
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onNavigationEvent(navigationEvent: Int, extras: Bundle?) {
                   Log.d("onNavigationEvent", navigationEvent.toString())
                   if (navigationEvent == CustomTabsCallback.TAB_HIDDEN) {
-                    this@MainActivity.unbindService(conn)
+                    this@BrowserActivity.unbindService(conn)
                   }
                 }
 
@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity() {
                   .setShowTitle(true)
                   .build()
               tabIntent.launchUrl(
-                  this@MainActivity,
+                  this@BrowserActivity,
                   "http://google.com".toUri()
               )
 
