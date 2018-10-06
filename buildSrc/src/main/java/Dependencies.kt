@@ -50,7 +50,7 @@ object Libs {
   val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0"
   val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0"
 
-  val multidex = "com.android.support:multidex:1.0.3"
+  val multidex = "androidx.multidex:multidex:2.0.0"
 
   val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
   val rxandroid = "io.reactivex.rxjava2:rxandroid:2.1.0"
@@ -58,9 +58,12 @@ object Libs {
   val groupie = "com.xwray:groupie:2.1.0"
   val groupie_databinding = "com.xwray:groupie-databinding:2.1.0"
 
+  val android_annotation = "androidx.annotation:annotation:1.0.0"
+
   val junit = "junit:junit:4.12"
   val truth = "com.google.truth:truth:0.39"
   val mockito_kotlin = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
   val test_runner = "androidx.test:runner:1.1.0-alpha4"
+  val test_rule = "androidx.test:rules:1.1.0-alpha4"
   val espresso = "androidx.test.espresso:espresso-core:3.1.0-alpha4"
 }
