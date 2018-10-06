@@ -31,16 +31,14 @@ object Libs {
   val media2 = "androidx.media2:media2:1.0.0-alpha03"
 
   val material = "com.google.android.material:material:1.0.0"
-  val paging = "androidx.paging:paging-runtime:2.0.0-rc01"
+  val paging = "androidx.paging:paging-runtime:2.0.0"
   val browser = "androidx.browser:browser:1.0.0"
   val navigation = "android.arch.navigation:navigation-fragment-ktx:${Vers.navigation}"
   val navigation_ui = "android.arch.navigation:navigation-ui-ktx:${Vers.navigation}"
 
-  val room_common = "androidx.room:room-common:2.0.0-rc01"
-  val room_runtime = "androidx.room:room-runtime:2.0.0-rc01"
-  val room_compiler = "androidx.room:room-compiler:2.0.0-rc01"
-
-  val rxwebview = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.2.0"
+  val room_common = "androidx.room:room-common:2.0.0"
+  val room_runtime = "androidx.room:room-runtime:2.0.0"
+  val room_compiler = "androidx.room:room-compiler:2.0.0"
 
   val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
   val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0"
@@ -51,6 +49,8 @@ object Libs {
   val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0"
 
   val multidex = "androidx.multidex:multidex:2.0.0"
+
+  val rxwebview = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.3.0"
 
   val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
   val rxandroid = "io.reactivex.rxjava2:rxandroid:2.1.0"
@@ -63,7 +63,7 @@ object Libs {
   val junit = "junit:junit:4.12"
   val truth = "com.google.truth:truth:0.39"
   val mockito_kotlin = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
-  val test_runner = "androidx.test:runner:1.1.0-alpha4"
-  val test_rule = "androidx.test:rules:1.1.0-alpha4"
-  val espresso = "androidx.test.espresso:espresso-core:3.1.0-alpha4"
+  val test_runner = "androidx.test:runner:1.1.0-beta01"
+  val test_rule = "androidx.test:rules:1.1.0-beta01"
+  val espresso = "androidx.test.espresso:espresso-core:3.1.0-beta01"
 }
