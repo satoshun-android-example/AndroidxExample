@@ -21,14 +21,14 @@ abstract class MyDatabase : RoomDatabase() {
 
 @Entity(tableName = "authors")
 data class Author(
-  @PrimaryKey val id: Long,
+  @PrimaryKey(autoGenerate = true) var id: Long? = null,
   val name: String
 )
 
 @Dao
 interface AuthorDao {
   @Insert
-  fun insert(author: Author)
+  fun insert(author: Author): Long
 
   @Query("select * FROM authors")
   fun getAuthors(): DataSource.Factory<Int, Author>

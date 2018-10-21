@@ -1,9 +1,8 @@
 package com.github.satoshun.example.androidx.room
 
 import android.os.Bundle
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedListAdapter
@@ -13,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.github.satoshun.example.common.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class RoomMainActivity : BaseActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +22,7 @@ class RoomMainActivity : BaseActivity() {
     setContentView(R.layout.activity_main)
 
     val database = Room
-        .databaseBuilder(this , MyDatabase::class.java, "database")
+        .databaseBuilder(this, MyDatabase::class.java, "database")
         .build()
 
     val adapter = MainAdapter(MainItemCallback())
@@ -33,6 +35,15 @@ class RoomMainActivity : BaseActivity() {
     authors.observe(this, Observer {
       adapter.submitList(it!!)
     })
+
+    var i = 0
+    launch(Dispatchers.IO) {
+      while (true) {
+        delay(3000)
+        val author = Author(name = "Mr ${i++}")
+        author.id = database.author().insert(author)
+      }
+    }
   }
 }
 
@@ -41,17 +52,18 @@ private class MainAdapter(
 ) : PagedListAdapter<Author, MainViewHolder>(diffCallback) {
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-    return MainViewHolder(ImageView(parent.context))
+    return MainViewHolder(TextView(parent.context))
   }
 
   override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
     val user = getItem(position)!!
+    holder.view.text = user.name
   }
 }
 
 private class MainViewHolder(
-  itemView: View
-) : RecyclerView.ViewHolder(itemView)
+  val view: TextView
+) : RecyclerView.ViewHolder(view)
 
 private class MainItemCallback : DiffUtil.ItemCallback<Author>() {
   override fun areItemsTheSame(oldItem: Author, newItem: Author): Boolean {
