@@ -2,9 +2,12 @@ package com.github.satoshun.example.androidx.room
 
 import android.os.Bundle
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import android.widget.TextView
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.paging.LivePagedListBuilder
+import androidx.paging.PagedList
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -44,6 +47,28 @@ class RoomMainActivity : BaseActivity() {
         author.id = database.author().insert(author)
       }
     }
+
+    val adapter2 = MainAdapter(MainItemCallback())
+    with(recycler2) {
+      this.adapter = adapter2
+      this.layoutManager = LinearLayoutManager(this@RoomMainActivity)
+    }
+    val observer = Observer<PagedList<Author>> {
+      adapter2.submitList(it!!)
+    }
+    var authors2: LiveData<PagedList<Author>>? = null
+    edit.setOnEditorActionListener { _, actionId, _ ->
+      if (actionId == EditorInfo.IME_ACTION_DONE) {
+        val input = edit.text.toString()
+        authors2?.removeObserver(observer)
+        authors2 = LivePagedListBuilder(database.author().getAuthors(input), 10)
+            .build()
+        authors2!!.observe(this, observer)
+        true
+      } else {
+        false
+      }
+    }
   }
 }
 
@@ -56,7 +81,7 @@ private class MainAdapter(
   }
 
   override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-    val user = getItem(position)!!
+    val user = getItem(position) ?: return
     holder.view.text = user.name
   }
 }
