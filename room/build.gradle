@@ -24,6 +24,8 @@ android {
 }
 
 dependencies {
+  implementation project(':common')
+
   implementation Libs.room_runtime
   implementation Libs.room_common
   kapt Libs.room_compiler
