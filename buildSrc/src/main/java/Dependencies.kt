@@ -1,16 +1,16 @@
 object Vers {
   val compile_sdk = 28
-  val min_sdk = 24
+  val min_sdk = 25
   val target_sdk = 28
 
-  val kotlin = "1.2.71"
-  val couroutine = "0.26.1"
+  val kotlin = "1.3.0-rc-190"
+  val couroutine = "1.0.0-RC1"
 
   val navigation = "1.0.0-alpha06"
 }
 
 object Libs {
-  val android_plugin = "com.android.tools.build:gradle:3.2.0"
+  val android_plugin = "com.android.tools.build:gradle:3.2.1"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:${Vers.navigation}"
   val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
@@ -36,9 +36,9 @@ object Libs {
   val navigation = "android.arch.navigation:navigation-fragment-ktx:${Vers.navigation}"
   val navigation_ui = "android.arch.navigation:navigation-ui-ktx:${Vers.navigation}"
 
-  val room_common = "androidx.room:room-common:2.0.0"
-  val room_runtime = "androidx.room:room-runtime:2.0.0"
-  val room_compiler = "androidx.room:room-compiler:2.0.0"
+  val room_common = "androidx.room:room-common:2.1.0-alpha01"
+  val room_runtime = "androidx.room:room-runtime:2.1.0-alpha01"
+  val room_compiler = "androidx.room:room-compiler:2.1.0-alpha01"
 
   val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
   val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0"
@@ -61,9 +61,9 @@ object Libs {
   val android_annotation = "androidx.annotation:annotation:1.0.0"
 
   val junit = "junit:junit:4.12"
-  val truth = "com.google.truth:truth:0.39"
+  val truth = "com.google.truth:truth:0.42"
   val mockito_kotlin = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
-  val test_runner = "androidx.test:runner:1.1.0-beta01"
-  val test_rule = "androidx.test:rules:1.1.0-beta01"
+  val test_runner = "androidx.test:runner:1.1.0-beta02"
+  val test_rule = "androidx.test:rules:1.1.0-beta02"
   val espresso = "androidx.test.espresso:espresso-core:3.1.0-beta01"
 }
