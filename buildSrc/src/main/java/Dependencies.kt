@@ -3,10 +3,10 @@ object Vers {
   val min_sdk = 25
   val target_sdk = 28
 
-  val kotlin = "1.3.0-rc-190"
-  val couroutine = "1.0.0-RC1"
+  val kotlin = "1.3.0"
+  val couroutine = "1.0.0"
 
-  val navigation = "1.0.0-alpha06"
+  val navigation = "1.0.0-alpha07"
 }
 
 object Libs {
