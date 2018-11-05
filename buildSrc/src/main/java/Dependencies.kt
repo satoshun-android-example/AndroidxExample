@@ -19,9 +19,9 @@ object Libs {
   val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Vers.couroutine}"
   val ui_coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Vers.couroutine}"
 
-  val ktx = "androidx.core:core-ktx:1.0.0"
+  val ktx = "androidx.core:core-ktx:1.0.1"
 
-  val appcompat = "androidx.appcompat:appcompat:1.0.0"
+  val appcompat = "androidx.appcompat:appcompat:1.0.1"
   val recyclerview = "androidx.recyclerview:recyclerview:1.0.0"
   val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
   val cardview = "androidx.cardview:cardview:1.0.0"
@@ -30,15 +30,15 @@ object Libs {
   val webkit = "androidx.webkit:webkit:1.0.0"
   val media2 = "androidx.media2:media2:1.0.0-alpha03"
 
-  val material = "com.google.android.material:material:1.0.0"
+  val material = "com.google.android.material:material:1.1.0-alpha01"
   val paging = "androidx.paging:paging-runtime:2.0.0"
   val browser = "androidx.browser:browser:1.0.0"
   val navigation = "android.arch.navigation:navigation-fragment-ktx:${Vers.navigation}"
   val navigation_ui = "android.arch.navigation:navigation-ui-ktx:${Vers.navigation}"
 
-  val room_common = "androidx.room:room-common:2.1.0-alpha01"
-  val room_runtime = "androidx.room:room-runtime:2.1.0-alpha01"
-  val room_compiler = "androidx.room:room-compiler:2.1.0-alpha01"
+  val room_common = "androidx.room:room-common:2.1.0-alpha02"
+  val room_runtime = "androidx.room:room-runtime:2.1.0-alpha02"
+  val room_compiler = "androidx.room:room-compiler:2.1.0-alpha02"
 
   val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
   val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0"
