@@ -21,6 +21,7 @@ object Libs {
 
   val ktx = "androidx.core:core-ktx:1.0.1"
 
+  val activity = "androidx.activity:activity-ktx:1.0.0-alpha01"
   val appcompat = "androidx.appcompat:appcompat:1.0.1"
   val recyclerview = "androidx.recyclerview:recyclerview:1.0.0"
   val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
