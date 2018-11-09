@@ -45,6 +45,8 @@ object Libs {
   val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0"
   val lifecycle_compiler = "androidx.lifecycle:lifecycle-compiler:2.0.0"
 
+  val biometric = "androidx.biometric:biometric:1.0.0-alpha02"
+
   val emoji = "androidx.emoji:emoji:1.0.0"
   val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0"
   val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0"

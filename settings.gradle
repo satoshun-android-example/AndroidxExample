@@ -8,5 +8,6 @@ include ':constraintlayout'
 include ':databinding'
 include ':emoji'
 include ':room'
+include ':biometric'
 
 include ':common'
