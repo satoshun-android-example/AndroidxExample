@@ -3,7 +3,7 @@ object Vers {
   val min_sdk = 25
   val target_sdk = 28
 
-  val kotlin = "1.3.0"
+  val kotlin = "1.3.10"
   val couroutine = "1.0.0"
 
   val navigation = "1.0.0-alpha07"
@@ -22,7 +22,7 @@ object Libs {
   val ktx = "androidx.core:core-ktx:1.0.1"
 
   val activity = "androidx.activity:activity-ktx:1.0.0-alpha01"
-  val appcompat = "androidx.appcompat:appcompat:1.0.1"
+  val appcompat = "androidx.appcompat:appcompat:1.0.2"
   val recyclerview = "androidx.recyclerview:recyclerview:1.0.0"
   val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
   val cardview = "androidx.cardview:cardview:1.0.0"
@@ -32,7 +32,7 @@ object Libs {
   val media2 = "androidx.media2:media2:1.0.0-alpha03"
 
   val material = "com.google.android.material:material:1.1.0-alpha01"
-  val paging = "androidx.paging:paging-runtime:2.0.0"
+  val paging = "androidx.paging:paging-runtime:2.1.0-beta01"
   val browser = "androidx.browser:browser:1.0.0"
   val navigation = "android.arch.navigation:navigation-fragment-ktx:${Vers.navigation}"
   val navigation_ui = "android.arch.navigation:navigation-ui-ktx:${Vers.navigation}"
