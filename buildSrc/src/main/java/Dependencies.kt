@@ -20,8 +20,9 @@ object Libs {
   val ui_coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Vers.couroutine}"
 
   val ktx = "androidx.core:core-ktx:1.0.1"
+  val activityx = "androidx.activity:activity-ktx:1.0.0-alpha01"
+  val fragmentx = "androidx.fragment:fragment-ktx:1.1.0-alpha01"
 
-  val activity = "androidx.activity:activity-ktx:1.0.0-alpha01"
   val appcompat = "androidx.appcompat:appcompat:1.0.2"
   val recyclerview = "androidx.recyclerview:recyclerview:1.0.0"
   val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
