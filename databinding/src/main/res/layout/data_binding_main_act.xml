@@ -6,7 +6,7 @@
       android:id="@+id/root"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      tools:context=".DataBindingMainActivity">
+      tools:context="com.github.satoshun.example.androidx.dab.DataBindingMainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"

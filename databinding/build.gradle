@@ -5,7 +5,7 @@ android {
   compileSdkVersion Vers.compile_sdk
 
   defaultConfig {
-    applicationId "com.github.satoshun.example.androidx.databinding"
+    applicationId "com.github.satoshun.example.androidx.dab"
     minSdkVersion Vers.min_sdk
     targetSdkVersion Vers.target_sdk
     versionCode 1
@@ -24,6 +24,8 @@ android {
 }
 
 dependencies {
+  implementation project(':common')
+
   implementation Libs.contentpager
 
   implementation Libs.kotlin

@@ -59,8 +59,8 @@ object Libs {
   const val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
   const val rxandroid = "io.reactivex.rxjava2:rxandroid:2.1.0"
 
-  const val groupie = "com.xwray:groupie:2.1.0"
-  const val groupie_databinding = "com.xwray:groupie-databinding:2.1.0"
+  const val groupie = "com.xwray:groupie:2.3.0"
+  const val groupie_databinding = "com.xwray:groupie-databinding:2.3.0"
 
   const val android_annotation = "androidx.annotation:annotation:1.0.0"
 
