@@ -10,7 +10,7 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import com.xwray.groupie.databinding.BindableItem
 
-class MainActivity : AppCompatActivity() {
+class DataBindingMainActivity : AppCompatActivity() {
   private lateinit var binding: MainActBinding
   private lateinit var adapter: MainAdapter
 
