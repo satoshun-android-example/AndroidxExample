@@ -23,8 +23,8 @@ object Libs {
   const val activityx = "androidx.activity:activity-ktx:1.0.0-alpha01"
   const val fragmentx = "androidx.fragment:fragment-ktx:1.1.0-alpha01"
 
-  const val appcompat = "androidx.appcompat:appcompat:1.0.2"
-  const val recyclerview = "androidx.recyclerview:recyclerview:1.0.0"
+  const val appcompat = "androidx.appcompat:appcompat:1.1.0-alpha01"
+  const val recyclerview = "androidx.recyclerview:recyclerview:1.1.0-alpha01"
   const val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
   const val cardview = "androidx.cardview:cardview:1.0.0"
 
@@ -33,14 +33,14 @@ object Libs {
   const val media2 = "androidx.media2:media2:1.0.0-alpha03"
 
   const val material = "com.google.android.material:material:1.1.0-alpha01"
-  const val paging = "androidx.paging:paging-runtime:2.1.0-beta01"
+  const val paging = "androidx.paging:paging-runtime:2.1.0-rc01"
   const val browser = "androidx.browser:browser:1.0.0"
   const val navigation = "android.arch.navigation:navigation-fragment-ktx:${Vers.navigation}"
   const val navigation_ui = "android.arch.navigation:navigation-ui-ktx:${Vers.navigation}"
 
-  const val room_common = "androidx.room:room-common:2.1.0-alpha02"
-  const val room_runtime = "androidx.room:room-runtime:2.1.0-alpha02"
-  const val room_compiler = "androidx.room:room-compiler:2.1.0-alpha02"
+  const val room_common = "androidx.room:room-common:2.1.0-alpha03"
+  const val room_runtime = "androidx.room:room-runtime:2.1.0-alpha03"
+  const val room_compiler = "androidx.room:room-compiler:2.1.0-alpha03"
 
   const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
   const val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0"
