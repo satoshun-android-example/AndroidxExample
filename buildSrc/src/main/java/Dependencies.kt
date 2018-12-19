@@ -52,6 +52,8 @@ object Libs {
   const val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0"
   const val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0"
 
+  const val savedstate = "androidx.savedstate:savedstate-bundle:1.0.0-alpha01"
+
   const val multidex = "androidx.multidex:multidex:2.0.0"
 
   const val rxwebview = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.3.0"

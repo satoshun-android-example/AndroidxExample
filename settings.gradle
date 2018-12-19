@@ -10,5 +10,6 @@ include ':emoji'
 include ':room'
 include ':biometric'
 include ':recyclerview'
+include ':savedstate'
 
 include ':common'
