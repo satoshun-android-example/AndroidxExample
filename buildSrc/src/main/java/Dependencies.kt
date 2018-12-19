@@ -54,6 +54,8 @@ object Libs {
 
   const val savedstate = "androidx.savedstate:savedstate-bundle:1.0.0-alpha01"
 
+  const val preference = "androidx.preference:preference-ktx:1.1.0-alpha02"
+
   const val multidex = "androidx.multidex:multidex:2.0.0"
 
   const val rxwebview = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.3.0"

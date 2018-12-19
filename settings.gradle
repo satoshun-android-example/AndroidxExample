@@ -11,5 +11,6 @@ include ':room'
 include ':biometric'
 include ':recyclerview'
 include ':savedstate'
+include ':preference'
 
 include ':common'
