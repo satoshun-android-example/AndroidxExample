@@ -1,12 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
 
 android {
   compileSdkVersion Vers.compile_sdk
+
   defaultConfig {
     minSdkVersion Vers.min_sdk
-    targetSdkVersion Vers.target_sdk
     versionCode 1
     versionName "1.0"
   }
@@ -23,5 +22,4 @@ dependencies {
 
   api Libs.coroutine
   api Libs.ui_coroutine
-
 }
