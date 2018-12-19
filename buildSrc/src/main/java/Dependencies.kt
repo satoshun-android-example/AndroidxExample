@@ -6,7 +6,7 @@ object Vers {
   const val kotlin = "1.3.11"
   const val couroutine = "1.0.1"
 
-  const val navigation = "1.0.0-alpha08"
+  const val navigation = "1.0.0-alpha09"
 }
 
 object Libs {
@@ -20,8 +20,8 @@ object Libs {
   const val ui_coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Vers.couroutine}"
 
   const val ktx = "androidx.core:core-ktx:1.1.0-alpha03"
-  const val activityx = "androidx.activity:activity-ktx:1.0.0-alpha01"
-  const val fragmentx = "androidx.fragment:fragment-ktx:1.1.0-alpha01"
+  const val activityx = "androidx.activity:activity-ktx:1.0.0-alpha03"
+  const val fragmentx = "androidx.fragment:fragment-ktx:1.1.0-alpha03"
 
   const val appcompat = "androidx.appcompat:appcompat:1.1.0-alpha01"
   const val recyclerview = "androidx.recyclerview:recyclerview:1.1.0-alpha01"

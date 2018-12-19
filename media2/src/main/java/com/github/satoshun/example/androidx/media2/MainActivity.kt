@@ -4,36 +4,42 @@ import android.os.Bundle
 import android.view.SurfaceHolder
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
-import androidx.media2.DataSourceDesc2
-import androidx.media2.MediaPlayer2
-import androidx.media2.UriDataSourceDesc2
+import androidx.media2.MediaItem
+import androidx.media2.MediaPlayer
+import androidx.media2.UriMediaItem
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.Executors
 
-private const val SAMPLE = "https://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4"
+private const val SAMPLE = "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
 
 class MainActivity : AppCompatActivity() {
-  private lateinit var player: MediaPlayer2
+  private lateinit var player: MediaPlayer
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    player = MediaPlayer2.create(this)
-    player.setEventCallback(
-        Executors.newCachedThreadPool(),
-        object : MediaPlayer2.EventCallback() {
-          override fun onInfo(mp: MediaPlayer2, dsd: DataSourceDesc2, what: Int, extra: Int) {
-            if (what == 100) player.play()
-          }
+    player = MediaPlayer(this)
+    player.registerPlayerCallback(
+      Executors.newCachedThreadPool(),
+      object : MediaPlayer.PlayerCallback() {
+        override fun onInfo(mp: MediaPlayer, item: MediaItem, what: Int, extra: Int) {
+          super.onInfo(mp, item, what, extra)
         }
+      }
     )
 
-    player.setDataSource(UriDataSourceDesc2
-        .Builder(this, SAMPLE.toUri())
-        .build()
+    player.setMediaItem(UriMediaItem
+      .Builder(this, SAMPLE.toUri())
+      .build()
     )
-    player.prepare()
+    player
+      .prepare()
+      .addListener(
+        Runnable {
+          player.play()
+        },
+        Executors.newCachedThreadPool())
 
     // todo
     surface.holder.addCallback(object : SurfaceHolder.Callback {

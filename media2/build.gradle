@@ -23,6 +23,8 @@ android {
 }
 
 dependencies {
+  implementation project(':common')
+
   implementation Libs.media2
 
   implementation Libs.kotlin
