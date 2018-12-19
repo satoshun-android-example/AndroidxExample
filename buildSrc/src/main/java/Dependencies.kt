@@ -19,7 +19,7 @@ object Libs {
   const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Vers.couroutine}"
   const val ui_coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Vers.couroutine}"
 
-  const val ktx = "androidx.core:core-ktx:1.0.1"
+  const val ktx = "androidx.core:core-ktx:1.1.0-alpha03"
   const val activityx = "androidx.activity:activity-ktx:1.0.0-alpha01"
   const val fragmentx = "androidx.fragment:fragment-ktx:1.1.0-alpha01"
 
@@ -30,9 +30,9 @@ object Libs {
 
   const val contentpager = "androidx.contentpager:contentpager:1.0.0-rc01"
   const val webkit = "androidx.webkit:webkit:1.0.0"
-  const val media2 = "androidx.media2:media2:1.0.0-alpha03"
+  const val media2 = "androidx.media2:media2:1.0.0-alpha04"
 
-  const val material = "com.google.android.material:material:1.1.0-alpha01"
+  const val material = "com.google.android.material:material:1.1.0-alpha02"
   const val paging = "androidx.paging:paging-runtime:2.1.0-rc01"
   const val browser = "androidx.browser:browser:1.0.0"
   const val navigation = "android.arch.navigation:navigation-fragment-ktx:${Vers.navigation}"
@@ -67,7 +67,7 @@ object Libs {
   const val junit = "junit:junit:4.12"
   const val truth = "com.google.truth:truth:0.42"
   const val mockito_kotlin = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
-  const val test_runner = "androidx.test:runner:1.1.0"
+  const val test_runner = "androidx.test:runner:1.1.1"
   const val test_rule = "androidx.test:rules:1.1.0"
-  const val espresso = "androidx.test.espresso:espresso-core:3.1.0"
+  const val espresso = "androidx.test.espresso:espresso-core:3.1.1"
 }
