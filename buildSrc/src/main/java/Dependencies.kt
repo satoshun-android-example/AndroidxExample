@@ -4,13 +4,13 @@ object Vers {
   const val target_sdk = 28
 
   const val kotlin = "1.3.11"
-  const val couroutine = "1.0.1"
+  const val couroutine = "1.1.0"
 
   const val navigation = "1.0.0-alpha09"
 }
 
 object Libs {
-  const val android_plugin = "com.android.tools.build:gradle:3.4.0-alpha08"
+  const val android_plugin = "com.android.tools.build:gradle:3.4.0-alpha09"
   const val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   const val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:${Vers.navigation}"
   const val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
@@ -53,6 +53,8 @@ object Libs {
   const val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0"
 
   const val savedstate = "androidx.savedstate:savedstate-bundle:1.0.0-alpha01"
+
+  const val recommendation = "androidx.recommendation:recommendation:1.0.0"
 
   const val preference = "androidx.preference:preference-ktx:1.1.0-alpha02"
 

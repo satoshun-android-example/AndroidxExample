@@ -12,5 +12,6 @@ include ':biometric'
 include ':recyclerview'
 include ':savedstate'
 include ':preference'
+include ':recommendation'
 
 include ':common'
