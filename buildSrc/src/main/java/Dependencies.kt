@@ -25,7 +25,7 @@ object Libs {
 
   const val appcompat = "androidx.appcompat:appcompat:1.1.0-alpha01"
   const val recyclerview = "androidx.recyclerview:recyclerview:1.1.0-alpha01"
-  const val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
+  const val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha3"
   const val cardview = "androidx.cardview:cardview:1.0.0"
 
   const val contentpager = "androidx.contentpager:contentpager:1.0.0-rc01"
@@ -46,7 +46,7 @@ object Libs {
   const val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0"
   const val lifecycle_compiler = "androidx.lifecycle:lifecycle-compiler:2.0.0"
 
-  const val biometric = "androidx.biometric:biometric:1.0.0-alpha02"
+  const val biometric = "androidx.biometric:biometric:1.0.0-alpha03"
 
   const val emoji = "androidx.emoji:emoji:1.0.0"
   const val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0"

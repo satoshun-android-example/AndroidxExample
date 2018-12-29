@@ -12,7 +12,6 @@ android {
     targetSdkVersion Vers.target_sdk
     versionCode 1
     versionName "1.0"
-    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
     release {
@@ -32,9 +31,4 @@ dependencies {
   implementation Libs.material
   implementation Libs.appcompat
   implementation Libs.constraintlayout
-
-  testImplementation Libs.junit
-
-  androidTestImplementation Libs.test_runner
-  androidTestImplementation Libs.espresso
 }
