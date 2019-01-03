@@ -10,7 +10,7 @@ object Vers {
 }
 
 object Libs {
-  const val android_plugin = "com.android.tools.build:gradle:3.4.0-alpha09"
+  const val android_plugin = "com.android.tools.build:gradle:3.4.0-alpha10"
   const val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   const val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:${Vers.navigation}"
   const val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
