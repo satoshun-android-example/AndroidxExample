@@ -42,8 +42,8 @@ object Libs {
   const val room_runtime = "androidx.room:room-runtime:2.1.0-alpha03"
   const val room_compiler = "androidx.room:room-compiler:2.1.0-alpha03"
 
-  const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
-  const val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0"
+  const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha01"
+  const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0-alpha01"
   const val lifecycle_compiler = "androidx.lifecycle:lifecycle-compiler:2.0.0"
 
   const val biometric = "androidx.biometric:biometric:1.0.0-alpha03"
