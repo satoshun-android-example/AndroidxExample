@@ -3,14 +3,14 @@ object Vers {
   const val min_sdk = 25
   const val target_sdk = 28
 
-  const val kotlin = "1.3.11"
+  const val kotlin = "1.3.20"
   const val couroutine = "1.1.0"
 
-  const val navigation = "1.0.0-alpha09"
+  const val navigation = "1.0.0-alpha11"
 }
 
 object Libs {
-  const val android_plugin = "com.android.tools.build:gradle:3.4.0-alpha10"
+  const val android_plugin = "com.android.tools.build:gradle:3.5.0-alpha02"
   const val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   const val safeargs_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:${Vers.navigation}"
   const val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
