@@ -1,14 +1,16 @@
+import static dependencies.DependenciesKt.*
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-  compileSdkVersion Vers.compile_sdk
+  compileSdkVersion COMPILE_SDK
 
   defaultConfig {
     applicationId "com.github.satoshun.example.androidx.contentpager"
-    minSdkVersion Vers.min_sdk
-    targetSdkVersion Vers.target_sdk
+    minSdkVersion MIN_SDK
+    targetSdkVersion TARGET_SDK
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -22,21 +24,16 @@ android {
 }
 
 dependencies {
-  implementation Libs.contentpager
+  implementation CONTENTPAGER
 
-  implementation Libs.kotlin
-  implementation Libs.ktx
-  implementation Libs.appcompat
-  implementation Libs.constraintlayout
-  implementation Libs.recyclerview
+  implementation KOTLIN
+  implementation KTX
+  implementation APPCOMPAT
+  implementation CONSTRAINTLAYOUT
+  implementation RECYCLERVIEW
 
-  implementation Libs.rxjava
-  implementation Libs.rxandroid
-  implementation Libs.coroutine
-  implementation Libs.ui_coroutine
-
-  testImplementation 'junit:junit:4.12'
-
-  androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
-  androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+  implementation RXJAVA
+  implementation RXANDROID
+  implementation COROUTINE
+  implementation UI_COROUTINE
 }

@@ -1,15 +1,17 @@
+import static dependencies.DependenciesKt.*
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "com.github.ben-manes.versions"
 
 android {
-  compileSdkVersion Vers.compile_sdk
+  compileSdkVersion COMPILE_SDK
 
   defaultConfig {
     applicationId "com.github.satoshun.example.androidx.biometric"
-    minSdkVersion Vers.min_sdk
-    targetSdkVersion Vers.target_sdk
+    minSdkVersion MIN_SDK
+    targetSdkVersion TARGET_SDK
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -23,17 +25,17 @@ android {
 }
 
 dependencies {
-  implementation Libs.biometric
+  implementation BIOMETRIC
 
-  implementation Libs.kotlin
+  implementation KOTLIN
 
-  implementation Libs.ktx
-  implementation Libs.material
-  implementation Libs.appcompat
-  implementation Libs.constraintlayout
+  implementation KTX
+  implementation MATERIAL
+  implementation APPCOMPAT
+  implementation CONSTRAINTLAYOUT
 
-  testImplementation Libs.junit
+  testImplementation JUNIT
 
-  androidTestImplementation Libs.test_runner
-  androidTestImplementation Libs.espresso
+  androidTestImplementation TEST_RUNNER
+  androidTestImplementation ESPRESSO
 }

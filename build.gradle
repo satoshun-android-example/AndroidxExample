@@ -1,12 +1,14 @@
+import static dependencies.DependenciesKt.*
+
 buildscript {
   repositories {
     google()
     jcenter()
   }
   dependencies {
-    classpath Libs.android_plugin
-    classpath Libs.kotlin_plugin
-    classpath Libs.versions_plugin
+    classpath ANDROID_PLUGIN
+    classpath KOTLIN_PLUGIN
+    classpath VERSIONS_PLUGIN
   }
 }
 

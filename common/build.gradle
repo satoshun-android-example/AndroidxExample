@@ -1,28 +1,30 @@
+import static dependencies.DependenciesKt.*
+
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-  compileSdkVersion Vers.compile_sdk
+  compileSdkVersion COMPILE_SDK
 
   defaultConfig {
-    minSdkVersion Vers.min_sdk
+    minSdkVersion MIN_SDK
     versionCode 1
     versionName "1.0"
   }
 }
 
 dependencies {
-  api Libs.kotlin
+  api KOTLIN
 
-  api Libs.appcompat
+  api APPCOMPAT
 
-  api Libs.activityx
-  api Libs.fragmentx
-  api Libs.ktx
+  api ACTIVITYX
+  api FRAGMENTX
+  api KTX
 
-  api Libs.viewmodel
-  api Libs.livedata
+  api VIEWMODEL
+  api LIVEDATA
 
-  api Libs.coroutine
-  api Libs.ui_coroutine
+  api COROUTINE
+  api UI_COROUTINE
 }

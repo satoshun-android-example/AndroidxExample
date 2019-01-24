@@ -1,14 +1,16 @@
+import static dependencies.DependenciesKt.*
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
-  compileSdkVersion Vers.compile_sdk
+  compileSdkVersion COMPILE_SDK
 
   defaultConfig {
     applicationId "com.github.satoshun.example.androidx.dab"
-    minSdkVersion Vers.min_sdk
-    targetSdkVersion Vers.target_sdk
+    minSdkVersion MIN_SDK
+    targetSdkVersion TARGET_SDK
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -27,19 +29,19 @@ android {
 dependencies {
   implementation project(':common')
 
-  implementation Libs.contentpager
+  implementation CONTENTPAGER
 
-  implementation Libs.kotlin
-  implementation Libs.ktx
-  implementation Libs.appcompat
-  implementation Libs.constraintlayout
-  implementation Libs.recyclerview
+  implementation KOTLIN
+  implementation KTX
+  implementation APPCOMPAT
+  implementation CONSTRAINTLAYOUT
+  implementation RECYCLERVIEW
 
-  implementation Libs.groupie
-  implementation Libs.groupie_databinding
+  implementation GROUPIE
+  implementation GROUPIE_DATABINDING
 
-  testImplementation Libs.junit
+  testImplementation JUNIT
 
-  androidTestImplementation Libs.test_runner
-  androidTestImplementation Libs.espresso
+  androidTestImplementation TEST_RUNNER
+  androidTestImplementation ESPRESSO
 }

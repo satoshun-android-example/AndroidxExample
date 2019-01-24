@@ -1,15 +1,17 @@
+import static dependencies.DependenciesKt.*
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "com.github.ben-manes.versions"
 
 android {
-  compileSdkVersion Vers.compile_sdk
+  compileSdkVersion COMPILE_SDK
 
   defaultConfig {
     applicationId "com.github.satoshun.example.androidx.paging"
-    minSdkVersion Vers.min_sdk
-    targetSdkVersion Vers.target_sdk
+    minSdkVersion MIN_SDK
+    targetSdkVersion TARGET_SDK
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -23,16 +25,16 @@ android {
 }
 
 dependencies {
-  implementation Libs.paging
+  implementation PAGING
 
-  implementation Libs.kotlin
-  implementation Libs.ktx
-  implementation Libs.appcompat
-  implementation Libs.constraintlayout
-  implementation Libs.recyclerview
+  implementation KOTLIN
+  implementation KTX
+  implementation APPCOMPAT
+  implementation CONSTRAINTLAYOUT
+  implementation RECYCLERVIEW
 
-  testImplementation Libs.junit
+  testImplementation JUNIT
 
-  androidTestImplementation Libs.test_runner
-  androidTestImplementation Libs.espresso
+  androidTestImplementation TEST_RUNNER
+  androidTestImplementation ESPRESSO
 }
