@@ -9,7 +9,7 @@ private const val VCOUROUTINE = "1.1.0"
 
 private const val VNAVIGATION = "1.0.0-alpha11"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.5.0-alpha02"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.5.0-alpha03"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val SAFEARGS_PLUGIN = "android.arch.navigation:navigation-safe-args-gradle-plugin:$VNAVIGATION"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
@@ -18,12 +18,12 @@ const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib:$VKOTLIN"
 const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$VCOUROUTINE"
 const val UI_COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VCOUROUTINE"
 
-const val KTX = "androidx.core:core-ktx:1.1.0-alpha03"
+const val KTX = "androidx.core:core-ktx:1.1.0-alpha04"
 const val ACTIVITYX = "androidx.activity:activity-ktx:1.0.0-alpha03"
 const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.1.0-alpha03"
 
 const val APPCOMPAT = "androidx.appcompat:appcompat:1.1.0-alpha01"
-const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0-alpha01"
+const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0-alpha02"
 const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.0-alpha3"
 const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 
@@ -32,14 +32,15 @@ const val WEBKIT = "androidx.webkit:webkit:1.0.0"
 const val MEDIA2 = "androidx.media2:media2:1.0.0-alpha04"
 
 const val MATERIAL = "com.google.android.material:material:1.1.0-alpha02"
-const val PAGING = "androidx.paging:paging-runtime:2.1.0-rc01"
+const val PAGING = "androidx.paging:paging-runtime:2.1.0"
 const val BROWSER = "androidx.browser:browser:1.0.0"
 const val NAVIGATION = "android.arch.navigation:navigation-fragment-ktx:$VNAVIGATION"
 const val NAVIGATION_UI = "android.arch.navigation:navigation-ui-ktx:$VNAVIGATION"
 
-const val ROOM_COMMON = "androidx.room:room-common:2.1.0-alpha03"
-const val ROOM_RUNTIME = "androidx.room:room-runtime:2.1.0-alpha03"
-const val ROOM_COMPILER = "androidx.room:room-compiler:2.1.0-alpha03"
+private const val VROOM = "2.1.0-alpha04"
+const val ROOM_COMMON = "androidx.room:room-common:$VROOM"
+const val ROOM_RUNTIME = "androidx.room:room-runtime:$VROOM"
+const val ROOM_COMPILER = "androidx.room:room-compiler:$VROOM"
 
 const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha01"
 const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0-alpha01"
