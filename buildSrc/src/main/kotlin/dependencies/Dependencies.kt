@@ -4,7 +4,7 @@ const val COMPILE_SDK = 28
 const val MIN_SDK = 25
 const val TARGET_SDK = 28
 
-private const val VKOTLIN = "1.3.20"
+private const val VKOTLIN = "1.3.21"
 private const val VCOUROUTINE = "1.1.0"
 
 private const val VNAVIGATION = "1.0.0-alpha11"
