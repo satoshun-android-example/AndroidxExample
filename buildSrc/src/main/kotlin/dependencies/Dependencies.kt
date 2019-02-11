@@ -54,6 +54,8 @@ const val EMOJI_BUNDLED = "androidx.emoji:emoji-bundled:1.0.0"
 
 const val SAVEDSTATE = "androidx.savedstate:savedstate-bundle:1.0.0-alpha01"
 
+const val VIEWPAGER2 = "androidx.viewpager2:viewpager2 1.0.0-alpha01"
+
 const val RECOMMENDATION = "androidx.recommendation:recommendation:1.0.0"
 
 const val PREFERENCE = "androidx.preference:preference-ktx:1.1.0-alpha02"

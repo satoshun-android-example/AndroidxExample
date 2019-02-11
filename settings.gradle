@@ -13,5 +13,6 @@ include ':recyclerview'
 include ':savedstate'
 include ':preference'
 include ':recommendation'
+include ':viewpager2'
 
 include ':common'
