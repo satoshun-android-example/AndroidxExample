@@ -10,8 +10,8 @@ class ViewPager2Activity : AppCompatActivity() {
     setContentView(R.layout.viewpager2_activity_main)
 
     val viewPager: ViewPager2 = findViewById(R.id.viewpager)
-//    viewPager.adapter = FragmentStateAdapterExample(supportFragmentManager)
+    viewPager.adapter = FragmentStateAdapterExample(supportFragmentManager)
 //    viewPager.adapter = ViewPagerAdapterExample()
-    viewPager.adapter = GroupieAdapterExample()
+//    viewPager.adapter = GroupieAdapterExample()
   }
 }

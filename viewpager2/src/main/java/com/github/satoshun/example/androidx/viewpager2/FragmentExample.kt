@@ -42,6 +42,6 @@ internal class FragmentStateAdapterExample(
   }
 
   override fun getItemCount(): Int {
-    return 1 // todo work at 1
+    return 5
   }
 }
