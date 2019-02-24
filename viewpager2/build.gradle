@@ -27,6 +27,7 @@ dependencies {
   implementation project(':common')
 
   implementation VIEWPAGER2
+  implementation GROUPIE
 
   implementation KOTLIN
 
