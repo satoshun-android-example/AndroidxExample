@@ -5,8 +5,6 @@ const val MIN_SDK = 25
 const val TARGET_SDK = 28
 
 private const val VKOTLIN = "1.3.21"
-private const val VCOUROUTINE = "1.1.0"
-
 private const val VNAVIGATION = "1.0.0-alpha11"
 
 const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.4.0-rc01"
@@ -14,6 +12,7 @@ const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val SAFEARGS_PLUGIN = "android.arch.navigation:navigation-safe-args-gradle-plugin:$VNAVIGATION"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
+private const val VCOUROUTINE = "1.1.1"
 const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib:$VKOTLIN"
 const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$VCOUROUTINE"
 const val UI_COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VCOUROUTINE"
@@ -69,6 +68,8 @@ const val RXANDROID = "io.reactivex.rxjava2:rxandroid:2.1.0"
 
 const val GROUPIE = "com.xwray:groupie:2.3.0"
 const val GROUPIE_DATABINDING = "com.xwray:groupie-databinding:2.3.0"
+
+const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
 
 const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 

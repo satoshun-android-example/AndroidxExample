@@ -15,4 +15,6 @@ include ':preference'
 include ':recommendation'
 include ':viewpager2'
 
+include ':workmanager'
+
 include ':common'
