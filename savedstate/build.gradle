@@ -27,10 +27,13 @@ dependencies {
   implementation project(':common')
 
   implementation SAVEDSTATE
+  implementation SAVEDSTATE_VIEWMODEL
 
   implementation KOTLIN
 
   implementation MATERIAL
   implementation APPCOMPAT
   implementation CONSTRAINTLAYOUT
+  implementation VIEWMODEL
+  implementation LIFECYCLE_EXTENSIONS
 }

@@ -5,9 +5,9 @@ const val MIN_SDK = 25
 const val TARGET_SDK = 28
 
 private const val VKOTLIN = "1.3.21"
-private const val VNAVIGATION = "1.0.0-alpha11"
+private const val VNAVIGATION = "1.0.0"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.4.0-rc01"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.4.0-rc02"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val SAFEARGS_PLUGIN = "android.arch.navigation:navigation-safe-args-gradle-plugin:$VNAVIGATION"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
@@ -41,9 +41,10 @@ const val ROOM_COMMON = "androidx.room:room-common:$VROOM"
 const val ROOM_RUNTIME = "androidx.room:room-runtime:$VROOM"
 const val ROOM_COMPILER = "androidx.room:room-compiler:$VROOM"
 
-const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha01"
-const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0-alpha01"
+const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha03"
+const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0-alpha03"
 const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:2.0.0"
+const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.1.0-alpha03"
 
 const val BIOMETRIC = "androidx.biometric:biometric:1.0.0-alpha03"
 
@@ -51,7 +52,8 @@ const val EMOJI = "androidx.emoji:emoji:1.0.0"
 const val EMOJI_COMPAT = "androidx.emoji:emoji-appcompat:1.0.0"
 const val EMOJI_BUNDLED = "androidx.emoji:emoji-bundled:1.0.0"
 
-const val SAVEDSTATE = "androidx.savedstate:savedstate-bundle:1.0.0-alpha01"
+const val SAVEDSTATE = "androidx.savedstate:savedstate:1.0.0-alpha02"
+const val SAVEDSTATE_VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-alpha01"
 
 const val VIEWPAGER2 = "androidx.viewpager2:viewpager2:1.0.0-alpha01"
 
