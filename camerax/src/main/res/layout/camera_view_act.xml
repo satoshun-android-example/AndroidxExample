@@ -75,4 +75,12 @@
     android:text="Torch"
     app:layout_constraintStart_toEndOf="@id/zoom"
     app:layout_constraintTop_toTopOf="@id/zoom" />
+
+  <Button
+    android:id="@+id/record"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Record"
+    app:layout_constraintStart_toEndOf="@id/torch"
+    app:layout_constraintTop_toTopOf="@id/torch" />
 </androidx.constraintlayout.widget.ConstraintLayout>

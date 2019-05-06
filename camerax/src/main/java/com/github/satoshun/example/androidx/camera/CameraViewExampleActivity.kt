@@ -4,17 +4,23 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.graphics.Rect
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.FlashMode
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageProxy
+import androidx.camera.core.VideoCapture
 import androidx.camera.view.CameraView
 import androidx.core.content.ContextCompat
+import androidx.core.view.postDelayed
 import kotlinx.android.synthetic.main.camera_view_act.*
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 private val REQUIRED_PERMISSIONS =
-  arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
+  arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE)
 
 private const val REQUEST_CODE_PERMISSIONS = 1
 
@@ -93,7 +99,8 @@ class CameraViewExampleActivity : AppCompatActivity() {
 
     facing.setOnClickListener {
       cameraView.toggleCamera()
-      // or cameraView.toggleCamera.setCameraByLensFacing(lens)
+//      cameraView.setCameraByLensFacing(CameraX.LensFacing.FRONT)
+//      cameraView.setCameraByLensFacing(CameraX.LensFacing.BACK)
 
       facing.text = cameraView.cameraLensFacing.toString()
     }
@@ -127,5 +134,27 @@ class CameraViewExampleActivity : AppCompatActivity() {
     torch.setOnClickListener {
       cameraView.enableTorch(!cameraView.isTorchOn)
     }
+
+    record.setOnClickListener {
+      cameraView.startRecording(createNewFile(), object : VideoCapture.OnVideoSavedListener {
+        override fun onVideoSaved(file: File) {
+          Log.d("success", "$file")
+        }
+
+        override fun onError(useCaseError: VideoCapture.UseCaseError?, message: String?, cause: Throwable?) {
+          Log.d("success", "$useCaseError $message $cause")
+        }
+      })
+
+      record.postDelayed(5000) {
+        cameraView.stopRecording()
+      }
+    }
   }
 }
+
+private fun createNewFile(): File =
+  File(
+    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM),
+    SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS", Locale.US).format(System.currentTimeMillis()) + ".mp4"
+  )
