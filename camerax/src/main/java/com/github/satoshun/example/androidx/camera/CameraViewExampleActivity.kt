@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageProxy
+import androidx.camera.view.CameraView
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.camera_view_act.*
 
@@ -67,5 +68,33 @@ class CameraViewExampleActivity : AppCompatActivity() {
         }
       })
     }
+
+    scaleType.setOnClickListener {
+      cameraView.scaleType = if (cameraView.scaleType == CameraView.ScaleType.CENTER_CROP) {
+        CameraView.ScaleType.CENTER_INSIDE
+      } else {
+        CameraView.ScaleType.CENTER_CROP
+      }
+      scaleType.text = cameraView.scaleType.toString()
+    }
+    scaleType.text = cameraView.scaleType.toString()
+
+    captureMode.setOnClickListener {
+      cameraView.captureMode = when {
+        cameraView.captureMode == CameraView.CaptureMode.IMAGE -> CameraView.CaptureMode.VIDEO
+        cameraView.captureMode == CameraView.CaptureMode.VIDEO -> CameraView.CaptureMode.MIXED
+        else -> CameraView.CaptureMode.IMAGE
+      }
+      captureMode.text = cameraView.captureMode.toString()
+    }
+    captureMode.text = cameraView.captureMode.toString()
+
+    facing.setOnClickListener {
+      cameraView.toggleCamera()
+      // or cameraView.toggleCamera.setCameraByLensFacing(lens)
+
+      facing.text = cameraView.cameraLensFacing.toString()
+    }
+    facing.text = cameraView.cameraLensFacing.toString()
   }
 }
