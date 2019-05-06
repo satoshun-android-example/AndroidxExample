@@ -2,9 +2,11 @@ package com.github.satoshun.example.androidx.camera
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.graphics.Rect
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.camera.core.FlashMode
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageProxy
 import androidx.camera.view.CameraView
@@ -96,5 +98,34 @@ class CameraViewExampleActivity : AppCompatActivity() {
       facing.text = cameraView.cameraLensFacing.toString()
     }
     facing.text = cameraView.cameraLensFacing.toString()
+
+    focus.setOnClickListener {
+      cameraView.focus(
+        Rect(0, 0, 100, 100),
+        Rect(0, 0, 100, 100)
+      )
+    }
+
+    flash.setOnClickListener {
+      cameraView.flash = if (cameraView.flash == FlashMode.OFF) {
+        FlashMode.ON
+      } else {
+        FlashMode.OFF
+      }
+      flash.text = cameraView.flash.toString()
+    }
+    flash.text = cameraView.flash.toString()
+
+    zoom.setOnClickListener {
+      cameraView.zoomLevel = cameraView.zoomLevel + 3f
+      zoom.text = cameraView.zoomLevel.toString()
+    }
+    zoom.text = cameraView.zoomLevel.toString()
+
+//    pinch
+
+    torch.setOnClickListener {
+      cameraView.enableTorch(!cameraView.isTorchOn)
+    }
   }
 }

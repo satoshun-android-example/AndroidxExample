@@ -22,7 +22,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Capture"
-    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/focus"
     app:layout_constraintStart_toStartOf="parent" />
 
   <Button
@@ -45,4 +45,34 @@
     android:layout_height="wrap_content"
     app:layout_constraintStart_toEndOf="@id/captureMode"
     app:layout_constraintTop_toTopOf="@id/captureMode" />
+
+  <Button
+    android:id="@+id/focus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="focus"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="@id/capture" />
+
+  <Button
+    android:id="@+id/flash"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/focus"
+    app:layout_constraintTop_toTopOf="@id/focus" />
+
+  <Button
+    android:id="@+id/zoom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/flash"
+    app:layout_constraintTop_toTopOf="@id/flash" />
+
+  <Button
+    android:id="@+id/torch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Torch"
+    app:layout_constraintStart_toEndOf="@id/zoom"
+    app:layout_constraintTop_toTopOf="@id/zoom" />
 </androidx.constraintlayout.widget.ConstraintLayout>
