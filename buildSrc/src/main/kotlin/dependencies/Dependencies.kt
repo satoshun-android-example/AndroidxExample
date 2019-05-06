@@ -4,10 +4,10 @@ const val COMPILE_SDK = 28
 const val MIN_SDK = 25
 const val TARGET_SDK = 28
 
-private const val VKOTLIN = "1.3.21"
+private const val VKOTLIN = "1.3.31"
 private const val VNAVIGATION = "1.0.0"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.4.0-rc03"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.4.0"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val SAFEARGS_PLUGIN = "android.arch.navigation:navigation-safe-args-gradle-plugin:$VNAVIGATION"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
@@ -72,6 +72,11 @@ const val GROUPIE = "com.xwray:groupie:2.3.0"
 const val GROUPIE_DATABINDING = "com.xwray:groupie-databinding:2.3.0"
 
 const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
+
+const val CAMERAX = "androidx.camera:camera-camera2:1.0.0-alpha02"
+const val CAMERAX_VIEW = "androidx.camera:camera-view:1.0.0-alpha02"
+const val CAMERAX_EXTENSIONS = "androidx.camera:camera-extensions:1.0.0-alpha02"
+const val CAMERAX_EXTENSIONS_STUB = "androidx.camera:camera-extensions-stub:1.0.0-alpha02"
 
 const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 
