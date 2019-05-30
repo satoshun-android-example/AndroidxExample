@@ -17,6 +17,6 @@ include ':viewpager2'
 
 include ':workmanager'
 
-include ':camerax'
+//include ':camerax'
 
 include ':common'
